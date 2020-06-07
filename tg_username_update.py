@@ -56,10 +56,7 @@ async def change_name_auto():
                 hsym = time_emoji_symb[(int(hour)%12)*2+shift]
                 # await client1.send_message('me', hsym)
                 for_fun = random.random() 
-                if for_fun < 0.90:
-                    last_name = '%s时%s分' % (hour, minu)
-                else:
-                    last_name = '%s' % cake
+                last_name = '%s时%s分' % (hour, minu)
         
                 await client1(UpdateProfileRequest(last_name=last_name))
                 logger.info('Updated -> %s' % last_name)
